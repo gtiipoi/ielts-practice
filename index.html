@@ -860,6 +860,19 @@
 
                     <div class="hero-panel hero-section data-management-panel">
                         <h3>💾 数据管理</h3>
+                        <h4>☁️ OneDrive 做题记录同步</h4>
+                        <p class="hero-panel__muted">
+                            在每台电脑用 Edge / Chrome 选择同一个 OneDrive 文件夹。首次连接会合并已有记录；
+                            网页打开且获得授权时自动同步。请等 OneDrive 上传完成再换电脑。
+                            删除记录也会同步；主题、题库和词汇设置仍保存在本机。
+                        </p>
+                        <div class="hero-settings-actions">
+                            <button class="btn hero-btn data-mgmt-btn" id="onedrive-connect-btn">📂 连接 OneDrive 文件夹</button>
+                            <button class="btn hero-btn data-mgmt-btn" id="onedrive-sync-btn">🔄 立即同步 / 重新授权</button>
+                            <button class="btn hero-btn data-mgmt-btn" id="onedrive-disconnect-btn">断开连接</button>
+                            <button class="btn hero-btn data-mgmt-btn" id="onedrive-recovery-btn">下载同步前记录副本</button>
+                        </div>
+                        <p class="hero-panel__muted" id="onedrive-sync-status" role="status" aria-live="polite">尚未连接</p>
                         <p class="hero-panel__muted">
                             数据备份、导入导出和完整性检查
                         </p>
@@ -1361,5 +1374,6 @@
                 </div>
             </div>
         </div>
+        <script src="js/utils/oneDriveRecordSync.js"></script>
     </body>
 </html>
